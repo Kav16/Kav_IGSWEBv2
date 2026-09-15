@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BIFOLDS R US | Bifold Door Designer</title>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23001049'/%3E%3Cpath d='M14 14h36v36H14zM26 15v34M38 15v34' fill='none' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="32x32" href="bifolds.png">
+<link rel="icon" type="image/png" sizes="192x192" href="bifolds.png">
+<link rel="apple-touch-icon" href="bifolds.png">
 <meta name="description" content="Original Imperial Glazing Solutions bifold door configurator.">
 <style>
 :root{--navy:#001049;--pink:#001049;--cream:#f5efe3;--ice:#f4f7ff;--line:#d8deee;--muted:#6c789a;--white:#fff;}
@@ -43,6 +45,8 @@ body{min-height:100vh}
     width: 100%;
     height: 100%;
     object-fit: contain;
+    background: transparent;
+
 }
 .brand h1{font-size:18px;margin:0;text-transform:uppercase;letter-spacing:.05em}
 .brand small{display:block;color:var(--pink);font-size:10px;margin-top:4px;letter-spacing:.15em}
@@ -114,9 +118,9 @@ input[type=number]{width:100%;padding:10px;border:1px solid var(--line);border-r
 .home-page{background:#f3f6fb;color:#07132f;min-height:100vh}
 .home-header{height:82px;padding:0 5vw;background:rgba(255,255,255,.94);display:flex;align-items:center;justify-content:space-between;gap:2rem;border-bottom:1px solid rgba(0,16,73,.14)}
 .home-brand{display:flex;align-items:center;gap:.85rem;text-decoration:none;color:#001049}
-.home-brand-mark{width:44px;height:44px;border-radius:10px;background:#001049;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,16,73,.2)}
-.home-brand-mark svg{width:30px;height:30px}
-.home-brand-name{font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:.96rem;line-height:1.1}
+.home-brand-mark{width:44px;height:44px;border-radius:10px;background: transparent;display:grid;place-items:center;}
+.home-brand-mark img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+.home-brand-name{font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:.96rem;line-height:1.1; font: }
 .home-brand-name small{display:block;margin-top:.25rem;color:#f711a7;font-size:.61rem;letter-spacing:.14em}
 .home-nav{display:flex;align-items:center;gap:1.8rem;font-size:.9rem;font-weight:700}
 .home-nav a{text-decoration:none;color:#001049}
@@ -164,7 +168,7 @@ input[type=number]{width:100%;padding:10px;border:1px solid var(--line);border-r
 <main id="homePage" class="home-page">
   <header class="home-header">
     <div class="home-brand">
-      <span class="home-brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M6 6h28v28H6z" stroke="white" stroke-width="2.5"/><path d="M15 7v26M25 7v26" stroke="#f711a7" stroke-width="2"/><path d="m15 9-6 6v16m16-22 6 6v16" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="home-brand-mark"><img src="bifolds.png" alt="Bifolds R Us logo"></span>
       <span class="home-brand-name">Bifolds R Us<small>Powered by Imperial Glazing Solutions</small></span>
     </div>
     <nav class="home-nav" aria-label="Homepage navigation"><a href="#how-it-works">How it works</a><a href="tel:02033690091">Call us</a><button class="home-button" type="button" onclick="openDesigner()">Design your bifold →</button></nav>
@@ -207,7 +211,7 @@ input[type=number]{width:100%;padding:10px;border:1px solid var(--line);border-r
 </main>
 <div class="app" id="bifoldDesigner" style="display:none">
   <div class="header">
-    <div class="brand"><div class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="100%" height="100%"><rect width="64" height="64" rx="12" fill="#001049"/><path d="M14 14h36v36H14zM26 15v34M38 15v34" fill="none" stroke="white" stroke-width="4"/></svg></div><div><h1>Bifold Door Designer</h1><small>BIFOLDS R US - Powered By Imperial Glazing Solutions</small></div></div>
+    <div class="brand"><div class="mark"><img src="bifolds.png" alt="Bifolds R Us logo"></div><div><h1>Bifold Door Designer</h1><small>BIFOLDS R US - Powered By Imperial Glazing Solutions</small></div></div>
     <div class="actions"><button class="btn" type="button" onclick="openHomePage()">Home</button><button class="btn" type="button" onclick="resetDesigner()">Reset</button><button class="btn alt" type="button" onclick="window.print()">Print Summary</button></div>
   </div>
   <div class="layout">
